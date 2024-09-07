@@ -10,3 +10,5 @@ while index < len(my_list):
         index += 1
     elif elt == 0:
         index += 1
+    else:
+        break
