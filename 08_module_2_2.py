@@ -1,4 +1,4 @@
-# операторы if, elif, else
+# операторы if, elif, else; сравнить введённые числа
 
 first = int(input())
 second = int(input())
