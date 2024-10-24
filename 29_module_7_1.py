@@ -18,13 +18,14 @@ class Shop:
         return str_prod
 
     def add(self, *products):
+        getter = self.get_products()
+        file = open(self.__file_name, 'a')
         for i in products:
-            if self.get_products().find(f'{i.name}') == -1:
-                file = open(self.__file_name, 'a')
+            if getter.find(f'{i.name}') == -1:
                 file.write(f'{i}\n')
-                file.close()
             else:
                 print(f'Продукт {i.name} уже есть в магазине')
+        file.close()
 
 s1 = Shop()
 p1 = Product('Potato', 5.5, 'Vegetables')
